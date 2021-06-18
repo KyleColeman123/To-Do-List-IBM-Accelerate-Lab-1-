@@ -7,6 +7,7 @@ const ToDoList = ({toDoList, handleToggle}) => {
             {toDoList.map(todo => {
                 return (
                     <ToDo todo={todo} handleToggle={handleToggle} />
+                    
                 )
             })}
         </div>

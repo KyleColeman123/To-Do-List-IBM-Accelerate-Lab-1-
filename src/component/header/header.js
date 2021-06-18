@@ -1,3 +1,5 @@
 export default function Header(){
-    return <div>Group 16 To Do List</div>
+    return <div>
+        <h1>Group 16 To Do List</h1>
+        </div>
 }

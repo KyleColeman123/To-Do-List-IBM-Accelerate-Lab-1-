@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Button } from '@material-ui/core';
+import TextField from '@material-ui/core/TextField';
 
 
 const ToDoForm = ({ addTask }) => {
@@ -14,11 +15,14 @@ const ToDoForm = ({ addTask }) => {
         e.preventDefault();
         addTask(userInput);
         setUserInput("");
+        return(
+            <div>Hello</div>
+        )
     }
     return (
         <form onSubmit={handleSubmit}>
-            <input value={userInput} type="text" onChange={handleChange} placeholder="Enter task..."/>
-            <Button onClick={handleSubmit}>Create</Button>
+            <TextField value={userInput} type="text" onChange={handleChange} variant="outlined" placeholder="Enter task..." size="small"></TextField>
+            <Button onClick={handleSubmit} variant="contain" color="primary">Create</Button>
         </form>
     );
 };
